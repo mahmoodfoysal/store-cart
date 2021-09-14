@@ -1,4 +1,3 @@
-
 const loadProducts = () => {
   const url = `https://fakestoreapi.com/products`;
   fetch(url)
@@ -7,7 +6,7 @@ const loadProducts = () => {
 };
 loadProducts();
 
-// show all product in UI 
+// show all product
 const showProducts = (products) => {
   const allProducts = products.map((pd) => pd);
   for (const product of allProducts) {
@@ -71,7 +70,7 @@ const getInputValue = (id) => {
   return converted;
 };
 
-// main price update function
+// main price update 
 const updatePrice = (id, value) => {
   const convertedOldPrice = getInputValue(id);
   const convertPrice = parseFloat(value);
@@ -79,7 +78,7 @@ const updatePrice = (id, value) => {
   document.getElementById(id).innerText = total.toFixed(2);
 };
 
-// set innerText function
+// set innerText 
 const setInnerText = (id, value) => {
   document.getElementById(id).innerText = value.toFixed(2);
 };
@@ -101,7 +100,7 @@ const updateTaxAndCharge = () => {
   }
 };
 
-//grandTotal update function
+//grandTotal update 
 const updateTotal = () => {
   const grandTotal =
     getInputValue("price") + getInputValue("delivery-charge") +
